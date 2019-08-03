@@ -12,6 +12,24 @@
 		F12E079D22F5FA3F0063EF88 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E079C22F5FA3F0063EF88 /* CardView.swift */; };
 		F12E079F22F605250063EF88 /* StatementHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F12E079E22F605250063EF88 /* StatementHeader.xib */; };
 		F12E07A122F605C40063EF88 /* StatementViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07A022F605C40063EF88 /* StatementViewHeader.swift */; };
+		F12E07B922F61B290063EF88 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B322F61B290063EF88 /* WelcomePresenter.swift */; };
+		F12E07BB22F61B290063EF88 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B522F61B290063EF88 /* WelcomeRouter.swift */; };
+		F12E07BC22F61B290063EF88 /* WelcomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B622F61B290063EF88 /* WelcomeModels.swift */; };
+		F12E07BD22F61B290063EF88 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B722F61B290063EF88 /* WelcomeViewController.swift */; };
+		F12E07BE22F61B290063EF88 /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B822F61B290063EF88 /* WelcomeInteractor.swift */; };
+		F12E07C122F61BC60063EF88 /* AuthWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07C022F61BC60063EF88 /* AuthWorker.swift */; };
+		F12E07C322F61C550063EF88 /* WelcomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07C222F61C550063EF88 /* WelcomeWorker.swift */; };
+		F12E07CD22F620720063EF88 /* StatementPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07C722F620720063EF88 /* StatementPresenter.swift */; };
+		F12E07CE22F620720063EF88 /* StatementWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07C822F620720063EF88 /* StatementWorker.swift */; };
+		F12E07CF22F620720063EF88 /* StatementRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07C922F620720063EF88 /* StatementRouter.swift */; };
+		F12E07D022F620720063EF88 /* StatementModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07CA22F620720063EF88 /* StatementModels.swift */; };
+		F12E07D122F620720063EF88 /* StatementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07CB22F620720063EF88 /* StatementViewController.swift */; };
+		F12E07D222F620720063EF88 /* StatementInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07CC22F620720063EF88 /* StatementInteractor.swift */; };
+		F12E07D722F6240C0063EF88 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07D622F6240C0063EF88 /* Statement.swift */; };
+		F12E07DD22F6334F0063EF88 /* StatementStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07DC22F6334F0063EF88 /* StatementStore.swift */; };
+		F12E07E122F6445B0063EF88 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07E022F6445B0063EF88 /* User.swift */; };
+		F12E07E322F645060063EF88 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07E222F645060063EF88 /* UserStore.swift */; };
+		F12E07E922F646B40063EF88 /* UserStoreProtcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07E822F646B40063EF88 /* UserStoreProtcol.swift */; };
 		F1BD38EC22F4EDAF00E606DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BD38EB22F4EDAF00E606DF /* AppDelegate.swift */; };
 		F1BD38EE22F4EDAF00E606DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BD38ED22F4EDAF00E606DF /* LoginViewController.swift */; };
 		F1BD38F122F4EDAF00E606DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BD38EF22F4EDAF00E606DF /* Main.storyboard */; };
@@ -37,6 +55,24 @@
 		F12E079C22F5FA3F0063EF88 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		F12E079E22F605250063EF88 /* StatementHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatementHeader.xib; sourceTree = "<group>"; };
 		F12E07A022F605C40063EF88 /* StatementViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewHeader.swift; sourceTree = "<group>"; };
+		F12E07B322F61B290063EF88 /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
+		F12E07B522F61B290063EF88 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		F12E07B622F61B290063EF88 /* WelcomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeModels.swift; sourceTree = "<group>"; };
+		F12E07B722F61B290063EF88 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		F12E07B822F61B290063EF88 /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
+		F12E07C022F61BC60063EF88 /* AuthWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWorker.swift; sourceTree = "<group>"; };
+		F12E07C222F61C550063EF88 /* WelcomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeWorker.swift; sourceTree = "<group>"; };
+		F12E07C722F620720063EF88 /* StatementPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementPresenter.swift; sourceTree = "<group>"; };
+		F12E07C822F620720063EF88 /* StatementWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementWorker.swift; sourceTree = "<group>"; };
+		F12E07C922F620720063EF88 /* StatementRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementRouter.swift; sourceTree = "<group>"; };
+		F12E07CA22F620720063EF88 /* StatementModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementModels.swift; sourceTree = "<group>"; };
+		F12E07CB22F620720063EF88 /* StatementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewController.swift; sourceTree = "<group>"; };
+		F12E07CC22F620720063EF88 /* StatementInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementInteractor.swift; sourceTree = "<group>"; };
+		F12E07D622F6240C0063EF88 /* Statement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statement.swift; sourceTree = "<group>"; };
+		F12E07DC22F6334F0063EF88 /* StatementStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementStore.swift; sourceTree = "<group>"; };
+		F12E07E022F6445B0063EF88 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F12E07E222F645060063EF88 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		F12E07E822F646B40063EF88 /* UserStoreProtcol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStoreProtcol.swift; sourceTree = "<group>"; };
 		F1BD38E822F4EDAE00E606DF /* BankApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BD38EB22F4EDAF00E606DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1BD38ED22F4EDAF00E606DF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +104,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F12E07B122F61AEA0063EF88 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				F12E07C622F6205A0063EF88 /* Statement */,
+				F12E07B222F61B130063EF88 /* Welcome */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		F12E07B222F61B130063EF88 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				F12E07B322F61B290063EF88 /* WelcomePresenter.swift */,
+				F12E07B522F61B290063EF88 /* WelcomeRouter.swift */,
+				F12E07B622F61B290063EF88 /* WelcomeModels.swift */,
+				F12E07B722F61B290063EF88 /* WelcomeViewController.swift */,
+				F12E07B822F61B290063EF88 /* WelcomeInteractor.swift */,
+				F12E07C222F61C550063EF88 /* WelcomeWorker.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		F12E07BF22F61BAF0063EF88 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F12E07C022F61BC60063EF88 /* AuthWorker.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F12E07C622F6205A0063EF88 /* Statement */ = {
+			isa = PBXGroup;
+			children = (
+				F12E07C722F620720063EF88 /* StatementPresenter.swift */,
+				F12E07C822F620720063EF88 /* StatementWorker.swift */,
+				F12E07C922F620720063EF88 /* StatementRouter.swift */,
+				F12E07CA22F620720063EF88 /* StatementModels.swift */,
+				F12E07CB22F620720063EF88 /* StatementViewController.swift */,
+				F12E07CC22F620720063EF88 /* StatementInteractor.swift */,
+			);
+			path = Statement;
+			sourceTree = "<group>";
+		};
+		F12E07D322F623C10063EF88 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F12E07D622F6240C0063EF88 /* Statement.swift */,
+				F12E07E022F6445B0063EF88 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F12E07D822F62DBE0063EF88 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F12E07E822F646B40063EF88 /* UserStoreProtcol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F12E07DB22F633270063EF88 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F12E07DC22F6334F0063EF88 /* StatementStore.swift */,
+				F12E07E222F645060063EF88 /* UserStore.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		F1BD38DF22F4EDAE00E606DF = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +194,11 @@
 		F1BD38EA22F4EDAE00E606DF /* BankApp */ = {
 			isa = PBXGroup;
 			children = (
+				F12E07DB22F633270063EF88 /* Service */,
+				F12E07D322F623C10063EF88 /* Models */,
+				F12E07D822F62DBE0063EF88 /* Protocols */,
+				F12E07BF22F61BAF0063EF88 /* Shared */,
+				F12E07B122F61AEA0063EF88 /* Scene */,
 				F1BD38EB22F4EDAF00E606DF /* AppDelegate.swift */,
 				F1BD38ED22F4EDAF00E606DF /* LoginViewController.swift */,
 				F1BD38EF22F4EDAF00E606DF /* Main.storyboard */,
@@ -216,13 +326,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F12E07D722F6240C0063EF88 /* Statement.swift in Sources */,
 				F103CFA922F51F7300C22A88 /* PaymentTableViewCell.swift in Sources */,
 				F1BD38EE22F4EDAF00E606DF /* LoginViewController.swift in Sources */,
+				F12E07C322F61C550063EF88 /* WelcomeWorker.swift in Sources */,
 				F1BD38EC22F4EDAF00E606DF /* AppDelegate.swift in Sources */,
+				F12E07D122F620720063EF88 /* StatementViewController.swift in Sources */,
+				F12E07E322F645060063EF88 /* UserStore.swift in Sources */,
+				F12E07BB22F61B290063EF88 /* WelcomeRouter.swift in Sources */,
+				F12E07BE22F61B290063EF88 /* WelcomeInteractor.swift in Sources */,
+				F12E07CF22F620720063EF88 /* StatementRouter.swift in Sources */,
+				F12E07D222F620720063EF88 /* StatementInteractor.swift in Sources */,
 				F103CFA722F51ECF00C22A88 /* ViewController.swift in Sources */,
+				F12E07BC22F61B290063EF88 /* WelcomeModels.swift in Sources */,
 				F12E079D22F5FA3F0063EF88 /* CardView.swift in Sources */,
+				F12E07E922F646B40063EF88 /* UserStoreProtcol.swift in Sources */,
+				F12E07B922F61B290063EF88 /* WelcomePresenter.swift in Sources */,
+				F12E07BD22F61B290063EF88 /* WelcomeViewController.swift in Sources */,
+				F12E07DD22F6334F0063EF88 /* StatementStore.swift in Sources */,
+				F12E07C122F61BC60063EF88 /* AuthWorker.swift in Sources */,
+				F12E07CD22F620720063EF88 /* StatementPresenter.swift in Sources */,
 				F12E07A122F605C40063EF88 /* StatementViewHeader.swift in Sources */,
 				F1BD390C22F4FFC900E606DF /* CustonNavigationController.swift in Sources */,
+				F12E07CE22F620720063EF88 /* StatementWorker.swift in Sources */,
+				F12E07D022F620720063EF88 /* StatementModels.swift in Sources */,
+				F12E07E122F6445B0063EF88 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import UIKit
 
 class CardView: UIView {
     
-    @IBInspectable let cornerRadius: CGFloat = 0
+    @IBInspectable let cornerRadius: CGFloat = 5
     @IBInspectable let shadowColor: UIColor? = UIColor.black
     @IBInspectable let shadowOffSetWidth: Int = 0
     @IBInspectable let shadowOffSetHeight: Int = 1

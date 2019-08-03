@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Arq-Qd-DsU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="BankApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="BankApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,6 +36,9 @@
                                         <integer key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lso-vc-dsL"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Pz9-MD-6LE">
                                 <rect key="frame" x="16" y="387.5" width="382" height="121"/>
@@ -80,15 +83,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="5zU-bu-lcg" id="DAs-18-2vz"/>
+                        <outlet property="userTextField" destination="2qP-lN-VoZ" id="joT-Zi-gJe"/>
+                        <segue destination="Arq-Qd-DsU" kind="show" identifier="StatementSegue" id="FMh-C2-u2T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+            <point key="canvasLocation" x="2107" y="26"/>
         </scene>
-        <!--View Controller-->
+        <!--Statement View Controller-->
         <scene sceneID="lJy-tf-LRR">
             <objects>
-                <viewController id="tpL-bC-fFF" customClass="ViewController" customModule="BankApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tpL-bC-fFF" customClass="StatementViewController" customModule="BankApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zBU-id-DiL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,35 +113,35 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5SH-dX-xNr" customClass="CardView" customModule="BankApp" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="8" width="382" height="76.5"/>
+                                                    <rect key="frame" x="16" y="8" width="382" height="77"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="66l-Ia-P8v">
-                                                            <rect key="frame" x="8" y="45" width="366" height="23.5"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="66l-Ia-P8v">
+                                                            <rect key="frame" x="8" y="45" width="366" height="24"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conta de Luz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbz-t5-2e0">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="23.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Conta de Luz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbz-t5-2e0">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="24"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                                     <color key="textColor" red="0.28235294117647058" green="0.32941176470588235" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="R$1.000,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBv-Gy-vP7">
-                                                                    <rect key="frame" x="166" y="0.0" width="200" height="23.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" text="R$1.000,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBv-Gy-vP7">
+                                                                    <rect key="frame" x="166" y="0.0" width="200" height="24"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                                     <color key="textColor" red="0.28235294119999998" green="0.3294117647" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="lFs-ir-Ce1">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="lFs-ir-Ce1">
                                                             <rect key="frame" x="8" y="8" width="366" height="19"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pagamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5G-gU-p5e">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Pagamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5G-gU-p5e">
                                                                     <rect key="frame" x="0.0" y="0.0" width="234.5" height="19"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                                     <color key="textColor" red="0.6588235294117647" green="0.70588235294117641" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="12/12/2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGG-yE-sMK">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" ambiguous="YES" text="12/12/2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGG-yE-sMK">
                                                                     <rect key="frame" x="304.5" y="0.0" width="61.5" height="19"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                                     <color key="textColor" red="0.6588235294" green="0.70588235290000001" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -164,6 +172,7 @@
                                         <connections>
                                             <outlet property="paymentDayLabel" destination="NGG-yE-sMK" id="bAQ-AF-3qu"/>
                                             <outlet property="paymentNameLabel" destination="mbz-t5-2e0" id="sPn-Ke-Eyc"/>
+                                            <outlet property="titleLabel" destination="f5G-gU-p5e" id="z6K-jE-6v7"/>
                                             <outlet property="valueLabel" destination="JBv-Gy-vP7" id="Uod-UY-yos"/>
                                         </connections>
                                     </tableViewCell>
@@ -213,7 +222,7 @@
                                 <constraints>
                                     <constraint firstItem="3ZC-jd-QbD" firstAttribute="leading" secondItem="dbf-6S-iQe" secondAttribute="leading" id="Jbf-JA-2u9"/>
                                     <constraint firstAttribute="trailing" secondItem="dbf-6S-iQe" secondAttribute="trailing" constant="146" id="Kh1-Ki-0v9"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3ZC-jd-QbD" secondAttribute="trailing" symbolic="YES" id="NbM-rd-C3Y"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3ZC-jd-QbD" secondAttribute="trailing" constant="20" symbolic="YES" id="NbM-rd-C3Y"/>
                                     <constraint firstItem="3ZC-jd-QbD" firstAttribute="top" secondItem="Kyz-Nl-WRj" secondAttribute="top" constant="50" id="SMI-Ja-5h5"/>
                                     <constraint firstItem="dbf-6S-iQe" firstAttribute="leading" secondItem="Kyz-Nl-WRj" secondAttribute="leading" constant="18" id="b2O-we-Rm6"/>
                                     <constraint firstItem="dbf-6S-iQe" firstAttribute="top" secondItem="3ZC-jd-QbD" secondAttribute="bottom" constant="22" id="eGj-XU-Cyb"/>
@@ -241,7 +250,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="statmentTableView" destination="6So-Xm-ftj" id="QMG-eQ-MoR"/>
+                        <outlet property="accountNumber" destination="KJC-rR-g58" id="HQp-iS-23b"/>
+                        <outlet property="balanceLabel" destination="kRH-jg-1nV" id="Whc-C1-oxr"/>
+                        <outlet property="nameLabel" destination="3ZC-jd-QbD" id="x6b-1c-SFh"/>
+                        <outlet property="statementsTableView" destination="6So-Xm-ftj" id="EQM-2b-wXo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pn7-2V-0Zr" userLabel="First Responder" sceneMemberID="firstResponder"/>

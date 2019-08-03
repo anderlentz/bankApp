@@ -50,13 +50,6 @@ extension ViewController : UITableViewDataSource{
         return cell
     }
     
-    
-    
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        // this will turn on `masksToBounds` just before showing the cell
-//        cell.contentView.layer.masksToBounds = true
-//    }
-    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 36
     }
