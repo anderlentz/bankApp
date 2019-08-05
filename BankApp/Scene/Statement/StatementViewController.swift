@@ -84,20 +84,30 @@ class StatementViewController: UIViewController, StatementDisplayLogic
         statementsTableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "StatementHeader")
     }
     
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        fechRecentStatements()
+    }
     
     
     // MARK: Fech recent statements
     
     var displayerdStatements:[RecentStatements.FechStatements.ViewModel.DisplayedStatement] = []
     
-    func fechRecentStatements(userID:String){
-        let request = RecentStatements.FechStatements.Request(userID: userID)
+    func fechRecentStatements(){
+        let request = RecentStatements.FechStatements.Request()
         interactor?.fechRecentStatements(request: request)
         
     }
     
     func displayFechedRecentStatements(viewModel: RecentStatements.FechStatements.ViewModel) {
         displayerdStatements = viewModel.displayedStatements
+        
+        DispatchQueue.main.async {
+            self.statementsTableView.reloadData()
+        }
+       
     }
     
 }
@@ -124,7 +134,7 @@ extension StatementViewController : UITableViewDataSource,UITableViewDelegate{
         
         let displayedStatement = displayerdStatements[indexPath.row]
         cell.paymentDayLabel.text = displayedStatement.date
-        cell.paymentNameLabel.text = displayedStatement.title
+        cell.paymentNameLabel.text = displayedStatement.description
         cell.valueLabel.text = displayedStatement.value
         cell.titleLabel.text = displayedStatement.title
         

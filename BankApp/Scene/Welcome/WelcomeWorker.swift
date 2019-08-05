@@ -22,9 +22,13 @@ class WelcomeWorker
     }
     
     
-    func login(completion: @escaping ((User) -> Void)) {
-        userStore.fetchUser { user in
-            completion(user)
+    func login(user:String,password:String,completion: @escaping ((User) -> Void)) {
+        userStore.fetchUser(user: user, password: password) { user,error  in
+            
+            if let userFromServer = user{
+                completion(userFromServer)
+            }
+            
         }
     }
 }

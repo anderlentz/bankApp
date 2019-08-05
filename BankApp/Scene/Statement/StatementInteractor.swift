@@ -18,13 +18,13 @@ protocol StatementBusinessLogic
     func fechRecentStatements(request: RecentStatements.FechStatements.Request)
 }
 
-protocol StatementDataStore
+protocol StatementDataStoreProtocol
 {
     var statements:[Statement]? { get }
     var loggedUser:User? { get set}
 }
 
-class StatementInteractor: StatementBusinessLogic, StatementDataStore
+class StatementInteractor: StatementBusinessLogic, StatementDataStoreProtocol
 {
     var loggedUser: User?
     var presenter: StatementPresentationLogic?
@@ -36,10 +36,13 @@ class StatementInteractor: StatementBusinessLogic, StatementDataStore
     
     func fechRecentStatements(request: RecentStatements.FechStatements.Request)
     {
-        statementWorker.fetchRecentStatements(userID: request.userID) { statements in
-            self.statements = statements
-            let response = RecentStatements.FechStatements.Response(statements: statements)
-            self.presenter?.presentFechedStatements(response: response)
+        if let user = loggedUser{
+            statementWorker.fetchRecentStatements(userID: user.userId) { statements in
+                self.statements = statements
+                let response = RecentStatements.FechStatements.Response(statements: statements)
+                self.presenter?.presentFechedStatements(response: response)
+            }
         }
+        
     }
 }

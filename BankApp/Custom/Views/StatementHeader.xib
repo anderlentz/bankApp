@@ -34,6 +34,7 @@
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <accessibility key="accessibilityConfiguration" identifier="StatementViewHeader"/>
             <constraints>
                 <constraint firstItem="oiw-W1-9nZ" firstAttribute="trailing" secondItem="BMQ-4A-Jlb" secondAttribute="trailing" id="5Qe-0U-xs5"/>
                 <constraint firstItem="BMQ-4A-Jlb" firstAttribute="leading" secondItem="oiw-W1-9nZ" secondAttribute="leading" id="6po-if-AuT"/>

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F103CFA722F51ECF00C22A88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103CFA622F51ECF00C22A88 /* ViewController.swift */; };
 		F103CFA922F51F7300C22A88 /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103CFA822F51F7300C22A88 /* PaymentTableViewCell.swift */; };
+		F11C900222F88FCF00AC69DD /* StatementDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C900122F88FCE00AC69DD /* StatementDataStore.swift */; };
 		F12E079D22F5FA3F0063EF88 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E079C22F5FA3F0063EF88 /* CardView.swift */; };
 		F12E079F22F605250063EF88 /* StatementHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F12E079E22F605250063EF88 /* StatementHeader.xib */; };
 		F12E07A122F605C40063EF88 /* StatementViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07A022F605C40063EF88 /* StatementViewHeader.swift */; };
@@ -31,7 +31,6 @@
 		F12E07E322F645060063EF88 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07E222F645060063EF88 /* UserStore.swift */; };
 		F12E07E922F646B40063EF88 /* UserStoreProtcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07E822F646B40063EF88 /* UserStoreProtcol.swift */; };
 		F1BD38EC22F4EDAF00E606DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BD38EB22F4EDAF00E606DF /* AppDelegate.swift */; };
-		F1BD38EE22F4EDAF00E606DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BD38ED22F4EDAF00E606DF /* LoginViewController.swift */; };
 		F1BD38F122F4EDAF00E606DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BD38EF22F4EDAF00E606DF /* Main.storyboard */; };
 		F1BD38F322F4EDB200E606DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1BD38F222F4EDB200E606DF /* Assets.xcassets */; };
 		F1BD38F622F4EDB200E606DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BD38F422F4EDB200E606DF /* LaunchScreen.storyboard */; };
@@ -50,8 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F103CFA622F51ECF00C22A88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F103CFA822F51F7300C22A88 /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
+		F11C900122F88FCE00AC69DD /* StatementDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementDataStore.swift; sourceTree = "<group>"; };
 		F12E079C22F5FA3F0063EF88 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		F12E079E22F605250063EF88 /* StatementHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatementHeader.xib; sourceTree = "<group>"; };
 		F12E07A022F605C40063EF88 /* StatementViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewHeader.swift; sourceTree = "<group>"; };
@@ -75,7 +74,6 @@
 		F12E07E822F646B40063EF88 /* UserStoreProtcol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStoreProtcol.swift; sourceTree = "<group>"; };
 		F1BD38E822F4EDAE00E606DF /* BankApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BD38EB22F4EDAF00E606DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F1BD38ED22F4EDAF00E606DF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F1BD38F022F4EDAF00E606DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1BD38F222F4EDB200E606DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1BD38F522F4EDB200E606DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -152,6 +150,7 @@
 			children = (
 				F12E07D622F6240C0063EF88 /* Statement.swift */,
 				F12E07E022F6445B0063EF88 /* User.swift */,
+				F11C900122F88FCE00AC69DD /* StatementDataStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,6 +170,43 @@
 				F12E07E222F645060063EF88 /* UserStore.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		F12E07EC22F655160063EF88 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				F12E07EF22F655900063EF88 /* Views */,
+				F12E07EE22F655870063EF88 /* Controllers */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		F12E07ED22F655560063EF88 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F1BD38EB22F4EDAF00E606DF /* AppDelegate.swift */,
+				F1BD38F722F4EDB200E606DF /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		F12E07EE22F655870063EF88 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F1BD390B22F4FFC900E606DF /* CustonNavigationController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F12E07EF22F655900063EF88 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F103CFA822F51F7300C22A88 /* PaymentTableViewCell.swift */,
+				F12E079C22F5FA3F0063EF88 /* CardView.swift */,
+				F12E07A022F605C40063EF88 /* StatementViewHeader.swift */,
+				F12E079E22F605250063EF88 /* StatementHeader.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F1BD38DF22F4EDAE00E606DF = {
@@ -194,23 +230,16 @@
 		F1BD38EA22F4EDAE00E606DF /* BankApp */ = {
 			isa = PBXGroup;
 			children = (
+				F12E07ED22F655560063EF88 /* Support */,
 				F12E07DB22F633270063EF88 /* Service */,
 				F12E07D322F623C10063EF88 /* Models */,
 				F12E07D822F62DBE0063EF88 /* Protocols */,
 				F12E07BF22F61BAF0063EF88 /* Shared */,
 				F12E07B122F61AEA0063EF88 /* Scene */,
-				F1BD38EB22F4EDAF00E606DF /* AppDelegate.swift */,
-				F1BD38ED22F4EDAF00E606DF /* LoginViewController.swift */,
+				F12E07EC22F655160063EF88 /* Custom */,
 				F1BD38EF22F4EDAF00E606DF /* Main.storyboard */,
 				F1BD38F222F4EDB200E606DF /* Assets.xcassets */,
 				F1BD38F422F4EDB200E606DF /* LaunchScreen.storyboard */,
-				F1BD38F722F4EDB200E606DF /* Info.plist */,
-				F1BD390B22F4FFC900E606DF /* CustonNavigationController.swift */,
-				F103CFA622F51ECF00C22A88 /* ViewController.swift */,
-				F103CFA822F51F7300C22A88 /* PaymentTableViewCell.swift */,
-				F12E079C22F5FA3F0063EF88 /* CardView.swift */,
-				F12E079E22F605250063EF88 /* StatementHeader.xib */,
-				F12E07A022F605C40063EF88 /* StatementViewHeader.swift */,
 			);
 			path = BankApp;
 			sourceTree = "<group>";
@@ -328,16 +357,15 @@
 			files = (
 				F12E07D722F6240C0063EF88 /* Statement.swift in Sources */,
 				F103CFA922F51F7300C22A88 /* PaymentTableViewCell.swift in Sources */,
-				F1BD38EE22F4EDAF00E606DF /* LoginViewController.swift in Sources */,
 				F12E07C322F61C550063EF88 /* WelcomeWorker.swift in Sources */,
 				F1BD38EC22F4EDAF00E606DF /* AppDelegate.swift in Sources */,
 				F12E07D122F620720063EF88 /* StatementViewController.swift in Sources */,
 				F12E07E322F645060063EF88 /* UserStore.swift in Sources */,
 				F12E07BB22F61B290063EF88 /* WelcomeRouter.swift in Sources */,
+				F11C900222F88FCF00AC69DD /* StatementDataStore.swift in Sources */,
 				F12E07BE22F61B290063EF88 /* WelcomeInteractor.swift in Sources */,
 				F12E07CF22F620720063EF88 /* StatementRouter.swift in Sources */,
 				F12E07D222F620720063EF88 /* StatementInteractor.swift in Sources */,
-				F103CFA722F51ECF00C22A88 /* ViewController.swift in Sources */,
 				F12E07BC22F61B290063EF88 /* WelcomeModels.swift in Sources */,
 				F12E079D22F5FA3F0063EF88 /* CardView.swift in Sources */,
 				F12E07E922F646B40063EF88 /* UserStoreProtcol.swift in Sources */,
@@ -514,7 +542,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F229TZ6SP5;
-				INFOPLIST_FILE = BankApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BankApp/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -532,7 +560,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F229TZ6SP5;
-				INFOPLIST_FILE = BankApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BankApp/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

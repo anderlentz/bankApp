@@ -16,19 +16,59 @@ class AuthWorker
 {
     let users = ["ray": "secret"]
     
-    func login(userID: String?, password: String?) -> Bool
+    func login(userID: String?, password: String?) -> (Bool,String)
     {
-        guard let userID = userID, let password = password else { return false }
-        return true
+        
+        let result:(Bool,String) = validatePassword(password: password)
+        
+        return result
+
     }
     
-    func saveUserID(_ userID: String?)
+    func validateUser(user:String?){
+        
+    }
+    
+    
+    func validatePassword(password: String?) -> (Bool,String) {
+        
+        if let password = password {
+        
+            let capitalLetterRegEx  = ".*[A-Z]+.*"
+            let texttest = NSPredicate(format:"SELF MATCHES %@", capitalLetterRegEx)
+            guard texttest.evaluate(with: password) else {
+                return (false,"Password must have at leat one capital letter")
+                
+            }
+            
+            let numberRegEx  = ".*[0-9]+.*"
+            let texttest1 = NSPredicate(format:"SELF MATCHES %@", numberRegEx)
+            guard texttest1.evaluate(with: password) else {
+                return (false,"Password must have at leat one number")
+                
+            }
+            
+            let specialCharacterRegEx  = ".*[!&^%$#@()/_*+-]+.*"
+            let texttest2 = NSPredicate(format:"SELF MATCHES %@", specialCharacterRegEx)
+            guard texttest2.evaluate(with: password) else {
+                return (false,"Password must have at leat one special character")
+                
+            }
+        }
+        else{
+            return (false,"Password is empty")
+        }
+        
+        return (true,"OK")
+    }
+    
+    func saveUserID(_ userID: Int?)
     {
         UserDefaults.standard.set(userID, forKey: "userID")
     }
     
-    func getUserID() -> String?
+    func getUserID() -> Int?
     {
-        return UserDefaults.standard.string(forKey: "userID")
+        return UserDefaults.standard.integer(forKey: "userID")
     }
 }

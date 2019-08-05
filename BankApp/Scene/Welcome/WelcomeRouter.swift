@@ -14,66 +14,57 @@ import UIKit
 
 @objc protocol WelcomeRoutingLogic
 {
-  func routeStatements(segue: UIStoryboardSegue?)
+    func routeStatements(segue: UIStoryboardSegue?)
 }
 
 protocol WelcomeDataPassing
 {
-  var dataStore: WelcomeDataStore? { get }
+    var dataStore: WelcomeDataStore? { get }
 }
 
 class WelcomeRouter: NSObject, WelcomeRoutingLogic, WelcomeDataPassing
 {
-  weak var viewController: WelcomeViewController?
-  var dataStore: WelcomeDataStore?
-  
-  // MARK: Routing
+    weak var viewController: WelcomeViewController?
+    var dataStore: WelcomeDataStore?
+    
+    // MARK: Routing
     
     func routeStatements(segue: UIStoryboardSegue?) {
-      if let segue = segue {
-        let destinationVC = segue.destination as! StatementViewController
-        var destinationDS = destinationVC.router!.dataStore!
-        passDataStatement(source: dataStore!, destination: &destinationDS)
-      }
-      else {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let destinationVC = storyboard.instantiateViewController(withIdentifier: "StatementViewController") as! StatementViewController
-        var destinationDS = destinationVC.router!.dataStore!
-        passDataStatement(source: dataStore!, destination: &destinationDS)
-        navigateToStatements(source: viewController!, destination: destinationVC)
-      }
-    }
-  
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
+        
 
-  // MARK: Navigation
-    
-    func navigateToStatements(source: WelcomeViewController, destination: StatementViewController){
-        source.show(destination, sender: nil)
+        if let segue = segue {
+            let destinationVC = segue.destination as! StatementViewController
+            var destinationDS = destinationVC.router!.dataStore!
+            passDataStatement(source: dataStore!, destination: &destinationDS)
+        }
+        else {
+            
+            let navController = viewController?.storyboard?.instantiateViewController(withIdentifier: "CustonNavigationController") as! CustonNavigationController
+            
+            let index = navController.viewControllers.count - 1
+            
+            if let destinationVC = navController.viewControllers[index] as? StatementViewController{
+                var destinationDS = destinationVC.router!.dataStore!
+                passDataStatement(source: dataStore!, destination: &destinationDS)
+                navigateToStatements(source: viewController!, destination: navController)
+            }
+        }
     }
-  
-  //func navigateToSomewhere(source: WelcomeViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  func passDataStatement(source: WelcomeDataStore, destination: inout StatementDataStore)
-  {
-    destination.loggedUser = source.loggedUser
-  }
+    
+   
+    
+    // MARK: Navigation
+    
+    func navigateToStatements(source: WelcomeViewController, destination: CustonNavigationController){
+        source.show(destination, sender: nil)
+    
+    }
+    
+    
+    // MARK: Passing data
+    
+    func passDataStatement(source: WelcomeDataStore, destination: inout StatementDataStoreProtocol)
+    {
+        destination.loggedUser = source.loggedUser
+    }
 }

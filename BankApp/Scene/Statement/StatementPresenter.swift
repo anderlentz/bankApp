@@ -25,11 +25,20 @@ class StatementPresenter: StatementPresentationLogic
     let currencyFormatter: NumberFormatter = {
         let currencyFormatter = NumberFormatter()
         currencyFormatter.numberStyle = .currency
+        currencyFormatter.currencySymbol = "R$"
         return currencyFormatter
     }()
     
     func formattValue(value:Float) -> String{
-        return "R$ \(String(describing: currencyFormatter.string(from: NSNumber(value: value))))"
+        
+        let formattedValue = currencyFormatter.string(from: NSNumber(value: value))
+
+        if let valueStr = formattedValue{
+            return "\(valueStr)"
+        }
+        else{
+            return ""
+        }
     }
     
     // MARK: Fetch statements
@@ -40,7 +49,7 @@ class StatementPresenter: StatementPresentationLogic
         
         for statement in response.statements{
             let date = statement.date
-            let description = statement.description
+            let description = statement.desc
             let title = statement.title
             let value = formattValue(value: statement.value)
             

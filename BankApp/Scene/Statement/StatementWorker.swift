@@ -19,25 +19,17 @@ class StatementWorker{
         self.statmentStore = statementStore
     }
     
-    func fetchRecentStatements(userID: String,completion: @escaping ([Statement]) -> Void){
+    func fetchRecentStatements(userID: Int? ,completion: @escaping ([Statement]) -> Void){
         statmentStore.fetchRecentStatements(userID: userID) { (statements, error) in
-            if error == nil {
-                DispatchQueue.main.async {
-                    completion([])
-                }
-                
-            }else{
-                DispatchQueue.main.async {
-                    completion(statements)
-                }
-            }
+            completion(statements)
+            
         }
     }
     
 }
 
 protocol StatementStoreProtocol {
-    func fetchRecentStatements(userID: String,completion: @escaping ([Statement], OrdersStoreError?) -> Void )
+    func fetchRecentStatements(userID: Int?,completion: @escaping ([Statement], OrdersStoreError?) -> Void )
 }
 
 // MARK: - Statement operation errors

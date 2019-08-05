@@ -9,5 +9,11 @@
 import Foundation
 
 protocol UserStoreProtocol {
-    func fetchUser(completion: @escaping ((User)->Void))
+    func fetchUser(user:String,password:String,completion: @escaping ((User?,UserStoreError?)->Void))
+}
+
+enum UserStoreError: Equatable, Error
+{
+    case CannotFetch(String)
+    
 }

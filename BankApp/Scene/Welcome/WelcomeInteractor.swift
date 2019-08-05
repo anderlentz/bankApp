@@ -14,12 +14,12 @@ import UIKit
 
 protocol WelcomeBusinessLogic
 {
-  func login(request: Welcome.Login.Request)
+    func login(request: Welcome.Login.Request)
 }
 
 protocol WelcomeDataStore
 {
-  var loggedUser: User? { get }
+    var loggedUser: User? { get }
 }
 
 class WelcomeInteractor: WelcomeBusinessLogic, WelcomeDataStore
@@ -27,27 +27,27 @@ class WelcomeInteractor: WelcomeBusinessLogic, WelcomeDataStore
     var loggedUser: User?
     
     
-  var presenter: WelcomePresentationLogic?
-  var worker = WelcomeWorker(userStore: UserStore())
-
-  
-  // MARK: Do login
-  
-  func login(request: Welcome.Login.Request)
-  {
-
+    var presenter: WelcomePresentationLogic?
+    var worker = WelcomeWorker(userStore: UserStore())
     
-    let user = request.userID
-    let password = request.password
-    let authWorker = AuthWorker()
     
-    if authWorker.login(userID: user, password: password){
-        worker.login { (user) in
-            self.loggedUser = user
-            let response = Welcome.Login.Response(success: true)
-            self.presenter?.presentLogin(response: response)
-            //authWorker.saveUserID(user)
+    // MARK: Do login
+    
+    func login(request: Welcome.Login.Request)
+    {
+        
+        
+        let user = request.userID
+        let password = request.password
+        let authWorker = AuthWorker()
+        
+        if authWorker.login(userID: user, password: password).0 {
+            worker.login(user: user, password: password) { (userFromServer) in
+                self.loggedUser = userFromServer
+                let response = Welcome.Login.Response(success: true,loggedUser: userFromServer)
+                self.presenter?.presentStatements(response: response)
+                authWorker.saveUserID(userFromServer.userId)
+            }
         }
     }
-  }
 }

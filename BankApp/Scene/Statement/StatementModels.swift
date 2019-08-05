@@ -20,7 +20,6 @@ enum RecentStatements
   {
     struct Request
     {
-        var userID: String
     }
     struct Response
     {

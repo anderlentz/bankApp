@@ -11,7 +11,7 @@ import Foundation
 struct Statement: Codable{
     
     var title:String
-    var description:String
+    var desc:String
     var date: String
     var value: Float
 }
