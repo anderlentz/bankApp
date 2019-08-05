@@ -26,6 +26,8 @@ class StatementPresenter: StatementPresentationLogic
         let currencyFormatter = NumberFormatter()
         currencyFormatter.numberStyle = .currency
         currencyFormatter.currencySymbol = "R$"
+        currencyFormatter.currencyDecimalSeparator = ","
+        currencyFormatter.currencyGroupingSeparator = "."
         return currencyFormatter
     }()
     
