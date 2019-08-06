@@ -17,4 +17,8 @@ struct Seeds{
     struct UserTest {
         static let loggedUser = User(userId: 1, name: "Jose da Silva Teste", bankAccount: "2050", agency: "012314564", balance: 50.0)
     }
+    struct ValidUserLogin {
+        static let emailOrCpf = "test@test.com"
+        static let password = "Test@1"
+    }
 }

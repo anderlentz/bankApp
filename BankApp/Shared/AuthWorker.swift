@@ -62,21 +62,21 @@ class AuthWorker
             let capitalLetterRegEx  = ".*[A-Z]+.*"
             let texttest = NSPredicate(format:"SELF MATCHES %@", capitalLetterRegEx)
             guard texttest.evaluate(with: password) else {
-                return (false,"Password must have at leat one capital letter")
+                return (false,"Password deve conter pelo menos uma letra maiúscula")
                 
             }
             
             let numberRegEx  = ".*[0-9]+.*"
             let texttest1 = NSPredicate(format:"SELF MATCHES %@", numberRegEx)
             guard texttest1.evaluate(with: password) else {
-                return (false,"Password must have at leat one number")
+                return (false,"Password deve conter pelo menos um número")
                 
             }
             
             let specialCharacterRegEx  = ".*[!&^%$#@()/_*+-]+.*"
             let texttest2 = NSPredicate(format:"SELF MATCHES %@", specialCharacterRegEx)
             guard texttest2.evaluate(with: password) else {
-                return (false,"Password must have at leat one special character")
+                return (false,"Password deve conter pelo menos um caracter especial")
                 
             }
         }
