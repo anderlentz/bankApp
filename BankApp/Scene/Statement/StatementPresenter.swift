@@ -15,10 +15,13 @@ import UIKit
 protocol StatementPresentationLogic
 {
     func presentFechedStatements(response: RecentStatements.FechStatements.Response)
+    func presentLoggedUser(response: RecentStatements.LoggedUser.Response)
 }
 
 class StatementPresenter: StatementPresentationLogic
 {
+    
+    
 
     weak var viewController: StatementDisplayLogic?
     
@@ -43,6 +46,16 @@ class StatementPresenter: StatementPresentationLogic
         }
     }
     
+    func formattAgency(agency:String) -> String{
+        
+        let first = String(agency[...String.Index(encodedOffset: 1)])
+        let second = String(agency[String.Index(encodedOffset: 2)...String.Index(encodedOffset: 8)])
+        let third = String(agency[String.Index(encodedOffset: 8)...])
+
+        return "\(first).\(second)-\(third)"
+       
+    }
+    
     // MARK: Fetch statements
     
     func presentFechedStatements(response: RecentStatements.FechStatements.Response) {
@@ -65,6 +78,26 @@ class StatementPresenter: StatementPresentationLogic
         
         let viewModel = RecentStatements.FechStatements.ViewModel(displayedStatements: displayedStatements)
         viewController?.displayFechedRecentStatements(viewModel: viewModel)
+    }
+    
+    
+    // MARK: Fetch Logged User
+    func presentLoggedUser(response: RecentStatements.LoggedUser.Response) {
+        
+        if let user = response.loggedUser{
+            
+            let agency = "\(user.bankAccount) / \(formattAgency(agency:user.agency))"
+            let value = formattValue(value:user.balance)
+            
+            let displayedLoggedUser = RecentStatements.LoggedUser.ViewModel.UserToDisplay(name: user.name,
+                                                                                          account: agency,
+                                                                                          balance: value)
+            let viewModel = RecentStatements.LoggedUser.ViewModel(displayedLoggedUser: displayedLoggedUser)
+            viewController?.displayLoggedUser(viewModel: viewModel)
+            
+
+        }
+        
     }
     
 }

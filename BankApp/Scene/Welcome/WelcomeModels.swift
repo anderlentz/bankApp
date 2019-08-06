@@ -26,7 +26,8 @@ enum Welcome
         struct Response
         {
             var success: Bool
-            var loggedUser: User
+            var loggedUser: User?
+            var message:String
         }
         struct ViewModel
         {

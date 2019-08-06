@@ -15,6 +15,7 @@ import UIKit
 protocol WelcomeBusinessLogic
 {
     func login(request: Welcome.Login.Request)
+
 }
 
 protocol WelcomeDataStore
@@ -24,6 +25,14 @@ protocol WelcomeDataStore
 
 class WelcomeInteractor: WelcomeBusinessLogic, WelcomeDataStore
 {
+    func validateUser(request: Welcome.Login.Request) {
+        
+    }
+    
+    func validadePassword(request: Welcome.Login.Request) {
+        
+    }
+    
     var loggedUser: User?
     
     
@@ -41,13 +50,19 @@ class WelcomeInteractor: WelcomeBusinessLogic, WelcomeDataStore
         let password = request.password
         let authWorker = AuthWorker()
         
-        if authWorker.login(userID: user, password: password).0 {
+        let auth = authWorker.login(userID: user, password: password)
+        
+        if auth.0 {
             worker.login(user: user, password: password) { (userFromServer) in
                 self.loggedUser = userFromServer
-                let response = Welcome.Login.Response(success: true,loggedUser: userFromServer)
+                let response = Welcome.Login.Response(success: true,loggedUser: userFromServer,message: auth.1)
                 self.presenter?.presentStatements(response: response)
                 authWorker.saveUserID(userFromServer.userId)
             }
+        }
+        else{
+            let response = Welcome.Login.Response(success: false,loggedUser: nil,message: auth.1)
+            self.presenter?.presentWarningMessage(response: response)
         }
     }
 }

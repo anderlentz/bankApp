@@ -21,7 +21,6 @@ class WelcomeWorker
         self.userStore = userStore
     }
     
-    
     func login(user:String,password:String,completion: @escaping ((User) -> Void)) {
         userStore.fetchUser(user: user, password: password) { user,error  in
             

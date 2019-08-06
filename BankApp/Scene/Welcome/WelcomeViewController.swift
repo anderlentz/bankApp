@@ -15,10 +15,13 @@ import UIKit
 protocol WelcomeDisplayLogic: class
 {
     func displayStatements(viewModel: Welcome.Login.ViewModel)
+    func displayWarningLoginMessage(response:Welcome.Login.Response)
 }
 
 class WelcomeViewController: UIViewController, WelcomeDisplayLogic
 {
+    
+    
     var interactor: WelcomeBusinessLogic?
     var router: (NSObjectProtocol & WelcomeRoutingLogic & WelcomeDataPassing)?
     
@@ -97,6 +100,13 @@ class WelcomeViewController: UIViewController, WelcomeDisplayLogic
             userTextField.text = nil
             passwordTextField.text = nil
         }
+    }
+    
+    func displayWarningLoginMessage(response: Welcome.Login.Response) {
+        let alert = UIAlertController(title: "Atenção", message: response.message, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(defaultAction)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

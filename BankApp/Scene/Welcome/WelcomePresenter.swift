@@ -15,17 +15,29 @@ import UIKit
 protocol WelcomePresentationLogic
 {
     func presentStatements(response: Welcome.Login.Response)
+    func presentWarningMessage(response: Welcome.Login.Response)
 }
 
 class WelcomePresenter: WelcomePresentationLogic
 {
+    
+    
+    
+    
     weak var viewController: WelcomeDisplayLogic?
     
     // MARK: Do something
     
     func presentStatements(response: Welcome.Login.Response)
     {
-        let viewModel = Welcome.Login.ViewModel(success: response.success, loggedUser: response.loggedUser)
-        viewController?.displayStatements(viewModel: viewModel)
+        if let user = response.loggedUser{
+            let viewModel = Welcome.Login.ViewModel(success: response.success, loggedUser: user)
+            viewController?.displayStatements(viewModel: viewModel)
+        }
+        
+    }
+    
+    func presentWarningMessage(response: Welcome.Login.Response) {
+        viewController?.displayWarningLoginMessage(response: response)
     }
 }

@@ -14,8 +14,8 @@ import UIKit
 
 protocol StatementBusinessLogic
 {
-    //func doSomething(request: Statement.Something.Request)
     func fechRecentStatements(request: RecentStatements.FechStatements.Request)
+    func getLoggesUser(request: RecentStatements.LoggedUser.Request)
 }
 
 protocol StatementDataStoreProtocol
@@ -26,6 +26,8 @@ protocol StatementDataStoreProtocol
 
 class StatementInteractor: StatementBusinessLogic, StatementDataStoreProtocol
 {
+   
+    
     var loggedUser: User?
     var presenter: StatementPresentationLogic?
     var statementWorker = StatementWorker(statementStore: StatementStore())
@@ -44,5 +46,10 @@ class StatementInteractor: StatementBusinessLogic, StatementDataStoreProtocol
             }
         }
         
+    }
+    
+    func getLoggesUser(request: RecentStatements.LoggedUser.Request) {
+        let response = RecentStatements.LoggedUser.Response(loggedUser: loggedUser)
+        presenter?.presentLoggedUser(response: response)
     }
 }

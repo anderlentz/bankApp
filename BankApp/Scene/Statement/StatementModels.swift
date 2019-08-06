@@ -14,26 +14,49 @@ import UIKit
 
 enum RecentStatements
 {
-  // MARK: Use cases
-  
-  enum FechStatements
-  {
-    struct Request
+    // MARK: Use cases
+    
+    enum FechStatements
     {
-    }
-    struct Response
-    {
-        var statements:[Statement]
-    }
-    struct ViewModel
-    {
-        struct DisplayedStatement {
-            var title:String
-            var description:String
-            var date: String
-            var value: String
+        struct Request
+        {
         }
-        var displayedStatements:[DisplayedStatement]
+        struct Response
+        {
+            var statements:[Statement]
+        }
+        struct ViewModel
+        {
+            struct DisplayedStatement {
+                var title:String
+                var description:String
+                var date: String
+                var value: String
+            }
+            var displayedStatements:[DisplayedStatement]
+        }
     }
-  }
+    
+    enum LoggedUser
+    {
+        struct Request
+        {
+        }
+        struct Response
+        {
+            var loggedUser:User?
+        }
+        struct ViewModel
+        {
+            struct UserToDisplay {
+                var name:String
+                var account:String
+                var balance: String
+                
+            }
+            var displayedLoggedUser:UserToDisplay
+        }
+    }
+    
+    
 }

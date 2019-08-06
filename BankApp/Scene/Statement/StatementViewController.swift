@@ -15,10 +15,14 @@ import UIKit
 protocol StatementDisplayLogic: class
 {
     func displayFechedRecentStatements(viewModel: RecentStatements.FechStatements.ViewModel)
+    func displayLoggedUser(viewModel: RecentStatements.LoggedUser.ViewModel)
 }
 
 class StatementViewController: UIViewController, StatementDisplayLogic
 {
+    
+    
+   
     
     var interactor: StatementBusinessLogic?
     var router: (NSObjectProtocol & StatementRoutingLogic & StatementDataPassing)?
@@ -87,7 +91,12 @@ class StatementViewController: UIViewController, StatementDisplayLogic
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
+        fetchLoggedUser()
         fechRecentStatements()
+    }
+    
+    // MARK: Exit Button
+    @IBAction func logoutActionButton(_ sender: UIBarButtonItem) {
     }
     
     
@@ -107,7 +116,19 @@ class StatementViewController: UIViewController, StatementDisplayLogic
         DispatchQueue.main.async {
             self.statementsTableView.reloadData()
         }
-       
+    }
+    
+    //MARK: Fetch logged user
+    func fetchLoggedUser(){
+        let request = RecentStatements.LoggedUser.Request()
+        interactor?.getLoggesUser(request: request)
+    }
+    
+    func displayLoggedUser(viewModel: RecentStatements.LoggedUser.ViewModel) {
+        let displayedUser = viewModel.displayedLoggedUser
+        nameLabel.text = displayedUser.name
+        balanceLabel.text = displayedUser.balance
+        accountNumber.text = displayedUser.account
     }
     
 }
