@@ -9,6 +9,34 @@
 /* Begin PBXBuildFile section */
 		F103CFA922F51F7300C22A88 /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103CFA822F51F7300C22A88 /* PaymentTableViewCell.swift */; };
 		F11C900222F88FCF00AC69DD /* StatementDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C900122F88FCE00AC69DD /* StatementDataStore.swift */; };
+		F11C900922F92BB100AC69DD /* StatementViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C900822F92BB100AC69DD /* StatementViewControllerTests.swift */; };
+		F11C900C22F92CFC00AC69DD /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B322F61B290063EF88 /* WelcomePresenter.swift */; };
+		F11C900D22F92CFC00AC69DD /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B522F61B290063EF88 /* WelcomeRouter.swift */; };
+		F11C900E22F92CFC00AC69DD /* WelcomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B622F61B290063EF88 /* WelcomeModels.swift */; };
+		F11C900F22F92CFC00AC69DD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B722F61B290063EF88 /* WelcomeViewController.swift */; };
+		F11C901022F92CFC00AC69DD /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B822F61B290063EF88 /* WelcomeInteractor.swift */; };
+		F11C901122F92CFC00AC69DD /* WelcomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07C222F61C550063EF88 /* WelcomeWorker.swift */; };
+		F11C901622F92D0200AC69DD /* StatementPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07C722F620720063EF88 /* StatementPresenter.swift */; };
+		F11C901722F92D0200AC69DD /* StatementWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07C822F620720063EF88 /* StatementWorker.swift */; };
+		F11C901822F92D0200AC69DD /* StatementRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07C922F620720063EF88 /* StatementRouter.swift */; };
+		F11C901922F92D0200AC69DD /* StatementModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07CA22F620720063EF88 /* StatementModels.swift */; };
+		F11C901A22F92D0200AC69DD /* StatementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07CB22F620720063EF88 /* StatementViewController.swift */; };
+		F11C901B22F92D0200AC69DD /* StatementInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07CC22F620720063EF88 /* StatementInteractor.swift */; };
+		F11C901C22F92D0700AC69DD /* AuthWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07C022F61BC60063EF88 /* AuthWorker.swift */; };
+		F11C901D22F92D0F00AC69DD /* UserStoreProtcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07E822F646B40063EF88 /* UserStoreProtcol.swift */; };
+		F11C901E22F92D1600AC69DD /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07D622F6240C0063EF88 /* Statement.swift */; };
+		F11C901F22F92D1600AC69DD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07E022F6445B0063EF88 /* User.swift */; };
+		F11C902022F92D1600AC69DD /* StatementDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C900122F88FCE00AC69DD /* StatementDataStore.swift */; };
+		F11C902122F92D1B00AC69DD /* StatementStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07DC22F6334F0063EF88 /* StatementStore.swift */; };
+		F11C902222F92D1B00AC69DD /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07E222F645060063EF88 /* UserStore.swift */; };
+		F11C902422F92D5200AC69DD /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103CFA822F51F7300C22A88 /* PaymentTableViewCell.swift */; };
+		F11C902522F92D5200AC69DD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E079C22F5FA3F0063EF88 /* CardView.swift */; };
+		F11C902622F92D5200AC69DD /* StatementViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07A022F605C40063EF88 /* StatementViewHeader.swift */; };
+		F11C902722F92D5200AC69DD /* StatementHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F12E079E22F605250063EF88 /* StatementHeader.xib */; };
+		F11C902822F92D5700AC69DD /* CustonNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BD390B22F4FFC900E606DF /* CustonNavigationController.swift */; };
+		F11C902A22F9B05800AC69DD /* StatementInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C902922F9B05800AC69DD /* StatementInteractorTests.swift */; };
+		F11C902C22F9B25200AC69DD /* Seeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C902B22F9B25200AC69DD /* Seeds.swift */; };
+		F11C902F22F9B62700AC69DD /* MockedStatementStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C902E22F9B62700AC69DD /* MockedStatementStore.swift */; };
 		F12E079D22F5FA3F0063EF88 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E079C22F5FA3F0063EF88 /* CardView.swift */; };
 		F12E079F22F605250063EF88 /* StatementHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F12E079E22F605250063EF88 /* StatementHeader.xib */; };
 		F12E07A122F605C40063EF88 /* StatementViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07A022F605C40063EF88 /* StatementViewHeader.swift */; };
@@ -51,6 +79,10 @@
 /* Begin PBXFileReference section */
 		F103CFA822F51F7300C22A88 /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
 		F11C900122F88FCE00AC69DD /* StatementDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementDataStore.swift; sourceTree = "<group>"; };
+		F11C900822F92BB100AC69DD /* StatementViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewControllerTests.swift; sourceTree = "<group>"; };
+		F11C902922F9B05800AC69DD /* StatementInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementInteractorTests.swift; sourceTree = "<group>"; };
+		F11C902B22F9B25200AC69DD /* Seeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seeds.swift; sourceTree = "<group>"; };
+		F11C902E22F9B62700AC69DD /* MockedStatementStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedStatementStore.swift; sourceTree = "<group>"; };
 		F12E079C22F5FA3F0063EF88 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		F12E079E22F605250063EF88 /* StatementHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatementHeader.xib; sourceTree = "<group>"; };
 		F12E07A022F605C40063EF88 /* StatementViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewHeader.swift; sourceTree = "<group>"; };
@@ -102,6 +134,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F11C900622F92B4800AC69DD /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F11C900722F92B9A00AC69DD /* Statement */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F11C900722F92B9A00AC69DD /* Statement */ = {
+			isa = PBXGroup;
+			children = (
+				F11C900822F92BB100AC69DD /* StatementViewControllerTests.swift */,
+				F11C902922F9B05800AC69DD /* StatementInteractorTests.swift */,
+			);
+			path = Statement;
+			sourceTree = "<group>";
+		};
+		F11C902D22F9B60B00AC69DD /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F11C902E22F9B62700AC69DD /* MockedStatementStore.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		F12E07B122F61AEA0063EF88 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,8 +304,11 @@
 		F1BD38FF22F4EDB200E606DF /* BankAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				F11C902D22F9B60B00AC69DD /* Mocks */,
+				F11C900622F92B4800AC69DD /* Scenes */,
 				F1BD390022F4EDB200E606DF /* BankAppTests.swift */,
 				F1BD390222F4EDB200E606DF /* Info.plist */,
+				F11C902B22F9B25200AC69DD /* Seeds.swift */,
 			);
 			path = BankAppTests;
 			sourceTree = "<group>";
@@ -345,6 +405,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11C902722F92D5200AC69DD /* StatementHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +447,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11C901D22F92D0F00AC69DD /* UserStoreProtcol.swift in Sources */,
+				F11C901C22F92D0700AC69DD /* AuthWorker.swift in Sources */,
+				F11C902A22F9B05800AC69DD /* StatementInteractorTests.swift in Sources */,
+				F11C900F22F92CFC00AC69DD /* WelcomeViewController.swift in Sources */,
+				F11C901722F92D0200AC69DD /* StatementWorker.swift in Sources */,
+				F11C900E22F92CFC00AC69DD /* WelcomeModels.swift in Sources */,
+				F11C902122F92D1B00AC69DD /* StatementStore.swift in Sources */,
+				F11C901A22F92D0200AC69DD /* StatementViewController.swift in Sources */,
+				F11C900C22F92CFC00AC69DD /* WelcomePresenter.swift in Sources */,
+				F11C901122F92CFC00AC69DD /* WelcomeWorker.swift in Sources */,
+				F11C901922F92D0200AC69DD /* StatementModels.swift in Sources */,
+				F11C902022F92D1600AC69DD /* StatementDataStore.swift in Sources */,
+				F11C901822F92D0200AC69DD /* StatementRouter.swift in Sources */,
+				F11C902422F92D5200AC69DD /* PaymentTableViewCell.swift in Sources */,
+				F11C902822F92D5700AC69DD /* CustonNavigationController.swift in Sources */,
+				F11C902622F92D5200AC69DD /* StatementViewHeader.swift in Sources */,
+				F11C900D22F92CFC00AC69DD /* WelcomeRouter.swift in Sources */,
+				F11C901E22F92D1600AC69DD /* Statement.swift in Sources */,
+				F11C902F22F9B62700AC69DD /* MockedStatementStore.swift in Sources */,
+				F11C901022F92CFC00AC69DD /* WelcomeInteractor.swift in Sources */,
+				F11C902222F92D1B00AC69DD /* UserStore.swift in Sources */,
+				F11C902C22F9B25200AC69DD /* Seeds.swift in Sources */,
+				F11C901622F92D0200AC69DD /* StatementPresenter.swift in Sources */,
+				F11C902522F92D5200AC69DD /* CardView.swift in Sources */,
+				F11C901F22F92D1600AC69DD /* User.swift in Sources */,
+				F11C900922F92BB100AC69DD /* StatementViewControllerTests.swift in Sources */,
+				F11C901B22F92D0200AC69DD /* StatementInteractor.swift in Sources */,
 				F1BD390122F4EDB200E606DF /* BankAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

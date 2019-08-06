@@ -38,13 +38,13 @@ class StatementInteractor: StatementBusinessLogic, StatementDataStoreProtocol
     
     func fechRecentStatements(request: RecentStatements.FechStatements.Request)
     {
-        if let user = loggedUser{
-            statementWorker.fetchRecentStatements(userID: user.userId) { statements in
-                self.statements = statements
-                let response = RecentStatements.FechStatements.Response(statements: statements)
-                self.presenter?.presentFechedStatements(response: response)
-            }
+       
+        statementWorker.fetchRecentStatements(userID: loggedUser?.userId) { statements in
+            self.statements = statements
+            let response = RecentStatements.FechStatements.Response(statements: statements)
+            self.presenter?.presentFechedStatements(response: response)
         }
+        
         
     }
     

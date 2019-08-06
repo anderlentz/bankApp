@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BankApp/Scene/Statement/StatementInteractor.swift"
-            timestampString = "586753231.014861"
+            timestampString = "586791617.15956"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BankApp/Scene/Welcome/WelcomeInteractor.swift"
-            timestampString = "586753231.014951"
+            timestampString = "586791617.1599"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
@@ -58,11 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BankApp/Scene/Welcome/WelcomeRouter.swift"
-            timestampString = "586718249.456827"
+            timestampString = "586759243.90821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"
-            endingLineNumber = "68">
+            endingLineNumber = "68"
+            landmarkName = "passDataStatement(source:destination:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -72,11 +74,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BankApp/Scene/Welcome/WelcomeRouter.swift"
-            timestampString = "586718249.4571871"
+            timestampString = "586759243.908251"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
-            endingLineNumber = "51">
+            endingLineNumber = "51"
+            landmarkName = "routeStatements(segue:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
