@@ -12,20 +12,20 @@
 
 import UIKit
 
-@objc protocol WelcomeRoutingLogic
+@objc protocol LoginRoutingLogic
 {
     func routeStatements(segue: UIStoryboardSegue?)
 }
 
-protocol WelcomeDataPassing
+protocol LoginDataPassing
 {
-    var dataStore: WelcomeDataStore? { get }
+    var dataStore: LoginDataStore? { get }
 }
 
-class WelcomeRouter: NSObject, WelcomeRoutingLogic, WelcomeDataPassing
+class LoginRouter: NSObject, LoginRoutingLogic, LoginDataPassing
 {
-    weak var viewController: WelcomeViewController?
-    var dataStore: WelcomeDataStore?
+    weak var viewController: LoginViewController?
+    var dataStore: LoginDataStore?
     
     // MARK: Routing
     
@@ -55,7 +55,7 @@ class WelcomeRouter: NSObject, WelcomeRoutingLogic, WelcomeDataPassing
     
     // MARK: Navigation
     
-    func navigateToStatements(source: WelcomeViewController, destination: CustonNavigationController){
+    func navigateToStatements(source: LoginViewController, destination: CustonNavigationController){
         source.show(destination, sender: nil)
     
     }
@@ -63,7 +63,7 @@ class WelcomeRouter: NSObject, WelcomeRoutingLogic, WelcomeDataPassing
     
     // MARK: Passing data
     
-    func passDataStatement(source: WelcomeDataStore, destination: inout StatementDataStoreProtocol)
+    func passDataStatement(source: LoginDataStore, destination: inout StatementDataStoreProtocol)
     {
         destination.loggedUser = source.loggedUser
     }

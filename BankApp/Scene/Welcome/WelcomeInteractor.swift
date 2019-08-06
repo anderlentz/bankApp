@@ -12,37 +12,37 @@
 
 import UIKit
 
-protocol WelcomeBusinessLogic
+protocol LoginBusinessLogic
 {
-    func login(request: Welcome.Login.Request)
+    func login(request: Login.UserLogin.Request)
 
 }
 
-protocol WelcomeDataStore
+protocol LoginDataStore
 {
     var loggedUser: User? { get }
 }
 
-class WelcomeInteractor: WelcomeBusinessLogic, WelcomeDataStore
+class LoginInteractor: LoginBusinessLogic, LoginDataStore
 {
-    func validateUser(request: Welcome.Login.Request) {
+    func validateUser(request: Login.UserLogin.Request) {
         
     }
     
-    func validadePassword(request: Welcome.Login.Request) {
+    func validadePassword(request: Login.UserLogin.Request) {
         
     }
     
     var loggedUser: User?
     
     
-    var presenter: WelcomePresentationLogic?
-    var worker = WelcomeWorker(userStore: UserStore())
+    var presenter: LoginPresentationLogic?
+    var worker = LoginWorker(userStore: UserStore())
     
     
     // MARK: Do login
     
-    func login(request: Welcome.Login.Request)
+    func login(request: Login.UserLogin.Request)
     {
         
         
@@ -55,13 +55,13 @@ class WelcomeInteractor: WelcomeBusinessLogic, WelcomeDataStore
         if auth.0 {
             worker.login(user: user, password: password) { (userFromServer) in
                 self.loggedUser = userFromServer
-                let response = Welcome.Login.Response(success: true,loggedUser: userFromServer,message: auth.1)
+                let response = Login.UserLogin.Response(success: true,loggedUser: userFromServer,message: auth.1)
                 self.presenter?.presentStatements(response: response)
                 authWorker.saveUserID(userFromServer.userId)
             }
         }
         else{
-            let response = Welcome.Login.Response(success: false,loggedUser: nil,message: auth.1)
+            let response = Login.UserLogin.Response(success: false,loggedUser: nil,message: auth.1)
             self.presenter?.presentWarningMessage(response: response)
         }
     }

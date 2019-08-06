@@ -10,10 +10,9 @@
 		F103CFA922F51F7300C22A88 /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103CFA822F51F7300C22A88 /* PaymentTableViewCell.swift */; };
 		F11C900222F88FCF00AC69DD /* StatementDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C900122F88FCE00AC69DD /* StatementDataStore.swift */; };
 		F11C900922F92BB100AC69DD /* StatementViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C900822F92BB100AC69DD /* StatementViewControllerTests.swift */; };
-		F11C900C22F92CFC00AC69DD /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B322F61B290063EF88 /* WelcomePresenter.swift */; };
-		F11C900D22F92CFC00AC69DD /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B522F61B290063EF88 /* WelcomeRouter.swift */; };
-		F11C900E22F92CFC00AC69DD /* WelcomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B622F61B290063EF88 /* WelcomeModels.swift */; };
-		F11C900F22F92CFC00AC69DD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B722F61B290063EF88 /* WelcomeViewController.swift */; };
+		F11C900C22F92CFC00AC69DD /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B322F61B290063EF88 /* LoginPresenter.swift */; };
+		F11C900D22F92CFC00AC69DD /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B522F61B290063EF88 /* LoginRouter.swift */; };
+		F11C900E22F92CFC00AC69DD /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B622F61B290063EF88 /* LoginModels.swift */; };
 		F11C901022F92CFC00AC69DD /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B822F61B290063EF88 /* WelcomeInteractor.swift */; };
 		F11C901122F92CFC00AC69DD /* WelcomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07C222F61C550063EF88 /* WelcomeWorker.swift */; };
 		F11C901622F92D0200AC69DD /* StatementPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07C722F620720063EF88 /* StatementPresenter.swift */; };
@@ -37,13 +36,14 @@
 		F11C902A22F9B05800AC69DD /* StatementInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C902922F9B05800AC69DD /* StatementInteractorTests.swift */; };
 		F11C902C22F9B25200AC69DD /* Seeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C902B22F9B25200AC69DD /* Seeds.swift */; };
 		F11C902F22F9B62700AC69DD /* MockedStatementStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C902E22F9B62700AC69DD /* MockedStatementStore.swift */; };
+		F11C903122F9BC4400AC69DD /* StatementPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C903022F9BC4400AC69DD /* StatementPresenterTests.swift */; };
+		F11C903322F9C1A400AC69DD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C903222F9C1A400AC69DD /* LoginViewController.swift */; };
 		F12E079D22F5FA3F0063EF88 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E079C22F5FA3F0063EF88 /* CardView.swift */; };
 		F12E079F22F605250063EF88 /* StatementHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F12E079E22F605250063EF88 /* StatementHeader.xib */; };
 		F12E07A122F605C40063EF88 /* StatementViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07A022F605C40063EF88 /* StatementViewHeader.swift */; };
-		F12E07B922F61B290063EF88 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B322F61B290063EF88 /* WelcomePresenter.swift */; };
-		F12E07BB22F61B290063EF88 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B522F61B290063EF88 /* WelcomeRouter.swift */; };
-		F12E07BC22F61B290063EF88 /* WelcomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B622F61B290063EF88 /* WelcomeModels.swift */; };
-		F12E07BD22F61B290063EF88 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B722F61B290063EF88 /* WelcomeViewController.swift */; };
+		F12E07B922F61B290063EF88 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B322F61B290063EF88 /* LoginPresenter.swift */; };
+		F12E07BB22F61B290063EF88 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B522F61B290063EF88 /* LoginRouter.swift */; };
+		F12E07BC22F61B290063EF88 /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B622F61B290063EF88 /* LoginModels.swift */; };
 		F12E07BE22F61B290063EF88 /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07B822F61B290063EF88 /* WelcomeInteractor.swift */; };
 		F12E07C122F61BC60063EF88 /* AuthWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07C022F61BC60063EF88 /* AuthWorker.swift */; };
 		F12E07C322F61C550063EF88 /* WelcomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E07C222F61C550063EF88 /* WelcomeWorker.swift */; };
@@ -83,13 +83,14 @@
 		F11C902922F9B05800AC69DD /* StatementInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementInteractorTests.swift; sourceTree = "<group>"; };
 		F11C902B22F9B25200AC69DD /* Seeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seeds.swift; sourceTree = "<group>"; };
 		F11C902E22F9B62700AC69DD /* MockedStatementStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedStatementStore.swift; sourceTree = "<group>"; };
+		F11C903022F9BC4400AC69DD /* StatementPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementPresenterTests.swift; sourceTree = "<group>"; };
+		F11C903222F9C1A400AC69DD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F12E079C22F5FA3F0063EF88 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		F12E079E22F605250063EF88 /* StatementHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatementHeader.xib; sourceTree = "<group>"; };
 		F12E07A022F605C40063EF88 /* StatementViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewHeader.swift; sourceTree = "<group>"; };
-		F12E07B322F61B290063EF88 /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
-		F12E07B522F61B290063EF88 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
-		F12E07B622F61B290063EF88 /* WelcomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeModels.swift; sourceTree = "<group>"; };
-		F12E07B722F61B290063EF88 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		F12E07B322F61B290063EF88 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		F12E07B522F61B290063EF88 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		F12E07B622F61B290063EF88 /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
 		F12E07B822F61B290063EF88 /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
 		F12E07C022F61BC60063EF88 /* AuthWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWorker.swift; sourceTree = "<group>"; };
 		F12E07C222F61C550063EF88 /* WelcomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeWorker.swift; sourceTree = "<group>"; };
@@ -147,6 +148,7 @@
 			children = (
 				F11C900822F92BB100AC69DD /* StatementViewControllerTests.swift */,
 				F11C902922F9B05800AC69DD /* StatementInteractorTests.swift */,
+				F11C903022F9BC4400AC69DD /* StatementPresenterTests.swift */,
 			);
 			path = Statement;
 			sourceTree = "<group>";
@@ -171,12 +173,12 @@
 		F12E07B222F61B130063EF88 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
-				F12E07B322F61B290063EF88 /* WelcomePresenter.swift */,
-				F12E07B522F61B290063EF88 /* WelcomeRouter.swift */,
-				F12E07B622F61B290063EF88 /* WelcomeModels.swift */,
-				F12E07B722F61B290063EF88 /* WelcomeViewController.swift */,
+				F12E07B322F61B290063EF88 /* LoginPresenter.swift */,
+				F12E07B522F61B290063EF88 /* LoginRouter.swift */,
+				F12E07B622F61B290063EF88 /* LoginModels.swift */,
 				F12E07B822F61B290063EF88 /* WelcomeInteractor.swift */,
 				F12E07C222F61C550063EF88 /* WelcomeWorker.swift */,
+				F11C903222F9C1A400AC69DD /* LoginViewController.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -422,16 +424,16 @@
 				F1BD38EC22F4EDAF00E606DF /* AppDelegate.swift in Sources */,
 				F12E07D122F620720063EF88 /* StatementViewController.swift in Sources */,
 				F12E07E322F645060063EF88 /* UserStore.swift in Sources */,
-				F12E07BB22F61B290063EF88 /* WelcomeRouter.swift in Sources */,
+				F12E07BB22F61B290063EF88 /* LoginRouter.swift in Sources */,
 				F11C900222F88FCF00AC69DD /* StatementDataStore.swift in Sources */,
 				F12E07BE22F61B290063EF88 /* WelcomeInteractor.swift in Sources */,
 				F12E07CF22F620720063EF88 /* StatementRouter.swift in Sources */,
 				F12E07D222F620720063EF88 /* StatementInteractor.swift in Sources */,
-				F12E07BC22F61B290063EF88 /* WelcomeModels.swift in Sources */,
+				F12E07BC22F61B290063EF88 /* LoginModels.swift in Sources */,
+				F11C903322F9C1A400AC69DD /* LoginViewController.swift in Sources */,
 				F12E079D22F5FA3F0063EF88 /* CardView.swift in Sources */,
 				F12E07E922F646B40063EF88 /* UserStoreProtcol.swift in Sources */,
-				F12E07B922F61B290063EF88 /* WelcomePresenter.swift in Sources */,
-				F12E07BD22F61B290063EF88 /* WelcomeViewController.swift in Sources */,
+				F12E07B922F61B290063EF88 /* LoginPresenter.swift in Sources */,
 				F12E07DD22F6334F0063EF88 /* StatementStore.swift in Sources */,
 				F12E07C122F61BC60063EF88 /* AuthWorker.swift in Sources */,
 				F12E07CD22F620720063EF88 /* StatementPresenter.swift in Sources */,
@@ -450,12 +452,12 @@
 				F11C901D22F92D0F00AC69DD /* UserStoreProtcol.swift in Sources */,
 				F11C901C22F92D0700AC69DD /* AuthWorker.swift in Sources */,
 				F11C902A22F9B05800AC69DD /* StatementInteractorTests.swift in Sources */,
-				F11C900F22F92CFC00AC69DD /* WelcomeViewController.swift in Sources */,
 				F11C901722F92D0200AC69DD /* StatementWorker.swift in Sources */,
-				F11C900E22F92CFC00AC69DD /* WelcomeModels.swift in Sources */,
+				F11C903122F9BC4400AC69DD /* StatementPresenterTests.swift in Sources */,
+				F11C900E22F92CFC00AC69DD /* LoginModels.swift in Sources */,
 				F11C902122F92D1B00AC69DD /* StatementStore.swift in Sources */,
 				F11C901A22F92D0200AC69DD /* StatementViewController.swift in Sources */,
-				F11C900C22F92CFC00AC69DD /* WelcomePresenter.swift in Sources */,
+				F11C900C22F92CFC00AC69DD /* LoginPresenter.swift in Sources */,
 				F11C901122F92CFC00AC69DD /* WelcomeWorker.swift in Sources */,
 				F11C901922F92D0200AC69DD /* StatementModels.swift in Sources */,
 				F11C902022F92D1600AC69DD /* StatementDataStore.swift in Sources */,
@@ -463,7 +465,7 @@
 				F11C902422F92D5200AC69DD /* PaymentTableViewCell.swift in Sources */,
 				F11C902822F92D5700AC69DD /* CustonNavigationController.swift in Sources */,
 				F11C902622F92D5200AC69DD /* StatementViewHeader.swift in Sources */,
-				F11C900D22F92CFC00AC69DD /* WelcomeRouter.swift in Sources */,
+				F11C900D22F92CFC00AC69DD /* LoginRouter.swift in Sources */,
 				F11C901E22F92D1600AC69DD /* Statement.swift in Sources */,
 				F11C902F22F9B62700AC69DD /* MockedStatementStore.swift in Sources */,
 				F11C901022F92CFC00AC69DD /* WelcomeInteractor.swift in Sources */,

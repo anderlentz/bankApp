@@ -12,32 +12,32 @@
 
 import UIKit
 
-protocol WelcomePresentationLogic
+protocol LoginPresentationLogic
 {
-    func presentStatements(response: Welcome.Login.Response)
-    func presentWarningMessage(response: Welcome.Login.Response)
+    func presentStatements(response: Login.UserLogin.Response)
+    func presentWarningMessage(response: Login.UserLogin.Response)
 }
 
-class WelcomePresenter: WelcomePresentationLogic
+class LoginPresenter: LoginPresentationLogic
 {
     
     
     
     
-    weak var viewController: WelcomeDisplayLogic?
+    weak var viewController: LoginDisplayLogic?
     
     // MARK: Do something
     
-    func presentStatements(response: Welcome.Login.Response)
+    func presentStatements(response: Login.UserLogin.Response)
     {
         if let user = response.loggedUser{
-            let viewModel = Welcome.Login.ViewModel(success: response.success, loggedUser: user)
+            let viewModel = Login.UserLogin.ViewModel(success: response.success, loggedUser: user)
             viewController?.displayStatements(viewModel: viewModel)
         }
         
     }
     
-    func presentWarningMessage(response: Welcome.Login.Response) {
+    func presentWarningMessage(response: Login.UserLogin.Response) {
         viewController?.displayWarningLoginMessage(response: response)
     }
 }

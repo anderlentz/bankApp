@@ -22,7 +22,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic
 {
     
     
-    var interactor: WelcomeBusinessLogic?
+    var interactor: LoginBusinessLogic?
     var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
     
     // MARK: Object lifecycle
@@ -44,7 +44,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic
     private func setup()
     {
         let viewController = self
-        let interactor = WelcomeInteractor()
+        let interactor = LoginInteractor()
         let presenter = LoginPresenter()
         let router = LoginRouter()
         viewController.interactor = interactor

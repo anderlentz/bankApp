@@ -12,11 +12,11 @@
 
 import UIKit
 
-enum Welcome
+enum Login
 {
     // MARK: Use cases
     
-    enum Login
+    enum UserLogin
     {
         struct Request
         {

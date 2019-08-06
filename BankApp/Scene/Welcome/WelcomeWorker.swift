@@ -12,7 +12,7 @@
 
 import UIKit
 
-class WelcomeWorker
+class LoginWorker
 {
     
     var userStore:UserStoreProtocol
