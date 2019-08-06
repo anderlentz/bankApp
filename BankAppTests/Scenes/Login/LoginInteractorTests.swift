@@ -73,7 +73,7 @@ class LoginInteractorTests: XCTestCase {
         
         
         //When
-        let validEmail = Seeds.ValidUserLogin.emailOrCpf
+        let validEmail = Seeds.ValidUserLogin.email
         let validPassword = Seeds.ValidUserLogin.password
         let request = Login.UserLogin.Request(userID: validEmail,
                                               password: validPassword)

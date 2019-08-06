@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import BankApp
 
 class LoginPresenterTests: XCTestCase {
     // MARK: - Subject under test
