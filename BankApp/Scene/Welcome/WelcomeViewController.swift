@@ -75,8 +75,15 @@ class WelcomeViewController: UIViewController, WelcomeDisplayLogic
         self.hideKeyboardWhenTappedAround()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        clean()
+    }
+    
+    
+    
     // MARK: Do login
     
+    @IBOutlet weak var loginIndicator: UIActivityIndicatorView!
     @IBOutlet weak var userTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBAction func loginButton(_ sender: UIButton) {
@@ -88,25 +95,42 @@ class WelcomeViewController: UIViewController, WelcomeDisplayLogic
         let userID = userTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         let request = Welcome.Login.Request(userID: userID, password: password)
-        
+        showLoginIndicatory()
         interactor?.login(request: request)
     }
     
     func displayStatements(viewModel: Welcome.Login.ViewModel)
     {
+        
         if viewModel.success {
             router?.routeStatements(segue: nil)
         } else {
+            stopLoginIndicator()
             userTextField.text = nil
             passwordTextField.text = nil
         }
     }
     
     func displayWarningLoginMessage(response: Welcome.Login.Response) {
+        stopLoginIndicator()
         let alert = UIAlertController(title: "Atenção", message: response.message, preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(defaultAction)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showLoginIndicatory() {
+        loginIndicator.startAnimating()
+    }
+    
+    func stopLoginIndicator(){
+        loginIndicator.stopAnimating()
+    }
+    
+    func clean(){
+        stopLoginIndicator()
+        userTextField.text = ""
+        passwordTextField.text = ""
     }
 }
 
@@ -118,5 +142,6 @@ extension WelcomeViewController {
     }
     @objc func dismissKeyboard() {
         view.endEditing(true)
+        
     }
 }

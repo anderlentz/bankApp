@@ -97,6 +97,7 @@ class StatementViewController: UIViewController, StatementDisplayLogic
     
     // MARK: Exit Button
     @IBAction func logoutActionButton(_ sender: UIBarButtonItem) {
+        dismiss(animated: false, completion: nil)
     }
     
     

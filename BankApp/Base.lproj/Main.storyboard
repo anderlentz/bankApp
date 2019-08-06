@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_bank" translatesAutoresizingMaskIntoConstraints="NO" id="gWG-DS-wSB">
-                                <rect key="frame" x="126" y="80" width="162" height="64"/>
+                                <rect key="frame" x="126" y="124" width="162" height="16"/>
                             </imageView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bja-fF-Vms">
                                 <rect key="frame" x="87" y="804" width="241" height="56"/>
@@ -68,12 +68,17 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pXb-3G-eix">
+                                <rect key="frame" x="197" y="516" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gWG-DS-wSB" secondAttribute="trailing" constant="126" id="7aV-gz-vOH"/>
+                            <constraint firstItem="pXb-3G-eix" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8dZ-lP-d7M"/>
                             <constraint firstItem="gWG-DS-wSB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="B9c-R2-r9S"/>
                             <constraint firstAttribute="bottom" secondItem="Bja-fF-Vms" secondAttribute="bottom" constant="36" id="I74-dh-Gzd"/>
+                            <constraint firstItem="pXb-3G-eix" firstAttribute="top" secondItem="5zU-bu-lcg" secondAttribute="bottom" constant="7.5" id="Mxy-4R-7ed"/>
                             <constraint firstItem="Bja-fF-Vms" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="S7e-v4-Tue"/>
                             <constraint firstItem="gWG-DS-wSB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="bbw-Xt-4FK"/>
                             <constraint firstItem="Pz9-MD-6LE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="btj-YK-EkN"/>
@@ -84,6 +89,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="loginIndicator" destination="pXb-3G-eix" id="Riy-Ph-BhX"/>
                         <outlet property="passwordTextField" destination="5zU-bu-lcg" id="DAs-18-2vz"/>
                         <outlet property="userTextField" destination="2qP-lN-VoZ" id="joT-Zi-gJe"/>
                         <segue destination="Arq-Qd-DsU" kind="show" identifier="StatementSegue" id="FMh-C2-u2T"/>
@@ -91,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2107" y="26"/>
+            <point key="canvasLocation" x="3439" y="749"/>
         </scene>
         <!--Statement View Controller-->
         <scene sceneID="lJy-tf-LRR">
@@ -257,11 +263,12 @@
                         <outlet property="balanceLabel" destination="kRH-jg-1nV" id="Whc-C1-oxr"/>
                         <outlet property="nameLabel" destination="3ZC-jd-QbD" id="x6b-1c-SFh"/>
                         <outlet property="statementsTableView" destination="6So-Xm-ftj" id="EQM-2b-wXo"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToLogin" id="QaG-Gm-ce5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pn7-2V-0Zr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3979.7101449275365" y="26.116071428571427"/>
+            <point key="canvasLocation" x="4072" y="19"/>
         </scene>
         <!--Custon Navigation Controller-->
         <scene sceneID="gJE-uY-8dQ">
@@ -279,7 +286,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yhv-vT-crj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2961" y="-75"/>
+            <point key="canvasLocation" x="4849" y="749"/>
         </scene>
     </scenes>
     <resources>
